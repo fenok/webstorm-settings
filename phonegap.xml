@@ -1,0 +1,5 @@
+<application>
+  <component name="PhoneGapSettings">
+    <option name="executablePath" value="C:\Users\fenok\Documents\working\kid-pay-frontend\node_modules\cordova\bin\cordova.cmd" />
+  </component>
+</application>

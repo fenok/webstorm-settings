@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern=".tslintignore" type="PLAIN_TEXT" />
       <mapping pattern="dockerEnvironment" type="PLAIN_TEXT" />
+      <mapping pattern="hi" type="PLAIN_TEXT" />
       <mapping pattern="SequentialExecutor" type="PLAIN_TEXT" />
       <mapping ext="cer" type="PLAIN_TEXT" />
     </extensionMap>

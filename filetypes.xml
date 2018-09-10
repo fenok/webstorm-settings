@@ -6,6 +6,7 @@
       <mapping pattern="hi" type="PLAIN_TEXT" />
       <mapping pattern="SequentialExecutor" type="PLAIN_TEXT" />
       <mapping ext="cer" type="PLAIN_TEXT" />
+      <mapping pattern="withLoadedFontStatus" type="TypeScript" />
     </extensionMap>
   </component>
 </application>

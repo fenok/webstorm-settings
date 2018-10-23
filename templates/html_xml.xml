@@ -1,0 +1,81 @@
+<templateSet group="html/xml">
+  <template name="CD" value="&lt;![CDATA[&#10;$SELECTION$&#10;]]&gt;" description="Surround with CDATA section" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="div" value="&lt;div class=&quot;{call .rootClass /}__$SELECTION$&quot;&gt;&#10;&lt;/div&gt;" description="div tag with rootClass" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="divm" value="&lt;div class=&quot;{call .rootClass /}__$CLASS$&#10;{sp}{call .rootClass /}__$CLASS$&quot;&gt;&#10;&lt;/div&gt;" description="div block with modificator" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="pd" value="$params.data" description="$params.data" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="pch" value="$params.children" description="$params.children" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="pc" value="$params.config" description="$params.config" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tmp" value="/**&#10; * @param params {$SELECTION$}&#10; */&#10;{template .$name$ private=&quot;true&quot;}&#10;&#10;{/template}" description="{template}{/template}" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="fch" value="{foreach $END$}&#10;    &#10;{/foreach}" description="{foreach}{/foreach}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="tmptmp" value="{namespace aa.lActiveAge.b$BLOCK_NAME$.Template}&#10;&#10;/**&#10; * @typedef {{&#10; *     data: {&#10; *     },&#10; *     config: {&#10; *     }&#10; * }} aa.lActiveAge.b$BLOCK_NAME$.TemplateParams&#10; */&#10;&#10;/**&#10; * Constructor&#10; * @param params {aa.lActiveAge.b$BLOCK_NAME$.TemplateParams}&#10; * @doc&#10; * @extends cl.iControl.Template&#10; * @constructor&#10; * @factory aa.lActiveAge.iFactory.Factory&#10; */&#10;{template .$BLOCK_NAME_FIRST_LOWERED$}&#10;    {call .init data=&quot;all&quot;/}&#10;{/template}&#10;&#10;/**&#10; * @override&#10; */&#10;{template .rootClass}&#10;    b-$BLOCK_NAME_CSS$&#10;{/template}&#10;&#10;/**&#10; * @override&#10; */&#10;{template .NAME}&#10;    $BLOCK_NAME$&#10;{/template}&#10;&#10;/**&#10; * @override&#10; */&#10;{template .body}&#10;    $BLOCK_NAME$&#10;{/template}&#10;" description="template template" toReformat="false" toShortenFQNames="true">
+    <variable name="BLOCK_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BLOCK_NAME_FIRST_LOWERED" expression="camelCase(BLOCK_NAME)" defaultValue="" alwaysStopAt="true" />
+    <variable name="BLOCK_NAME_CSS" expression="lowercaseAndDash(BLOCK_NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

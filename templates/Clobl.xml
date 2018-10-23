@@ -1,0 +1,18 @@
+<templateSet group="Clobl">
+  <template name="inhcont" value="goog.provide('$CONTROL$');&#10;&#10;goog.require('$VIEW$');&#10;goog.require('$BASE_CONTROL$');&#10;&#10;&#10;&#10;/**&#10; * $CONTROL_SHORT$ control&#10; * @param {Object} view&#10; * @param {Object=} opt_params&#10; * @param {Object=} opt_domHelper&#10; * @constructor&#10; * @extends {$BASE_CONTROL$}&#10; */&#10;$CONTROL$ = function(view, opt_params, opt_domHelper) {&#10;    $CONTROL$.base(&#10;        this, 'constructor', view, opt_params, opt_domHelper&#10;    );&#10;};&#10;goog.inherits($CONTROL$, $BASE_CONTROL$);&#10;&#10;&#10;goog.scope(function() {&#10;    var $CONTROL_SHORT$ = $CONTROL$;&#10;    var View = $VIEW$;&#10;&#10;&#10;    /**&#10;     * Event enum&#10;     * @enum {string}&#10;     */&#10;    $CONTROL_SHORT$.Event = {&#10;    };&#10;&#10;&#10;    /**&#10;     * @override&#10;     */&#10;    $CONTROL_SHORT$.prototype.decorateInternal = function() {&#10;        $CONTROL_SHORT$.base(this, 'decorateInternal');&#10;    };&#10;&#10;&#10;    /**&#10;     * @override&#10;     */&#10;    $CONTROL_SHORT$.prototype.enterDocument = function() {&#10;        $CONTROL_SHORT$.base(this, 'enterDocument');&#10;    };&#10;});  // goog.scope&#10;" description="Standard control inheritance template" toReformat="false" toShortenFQNames="true">
+    <variable name="CONTROL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BASE_CONTROL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROL_SHORT" expression="" defaultValue="Control" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="inhvi" value="goog.provide('$VIEW$');&#10;&#10;goog.require('$BASE_VIEW$');&#10;&#10;&#10;&#10;/**&#10; * View&#10; * @param {Object=} opt_params&#10; * @param {Function=} opt_template&#10; * @param {string=} opt_modifier&#10; * @constructor&#10; * @extends {$BASE_VIEW$}&#10; */&#10;$VIEW$ = function(opt_params, opt_template, opt_modifier) {&#10;    $VIEW$.base(&#10;        this, 'constructor', opt_params, opt_template, opt_modifier&#10;    );&#10;&#10;    this.setCssClass($VIEW$.CssClass.ROOT);&#10;};&#10;goog.inherits($VIEW$, $BASE_VIEW$);&#10;&#10;&#10;goog.scope(function() {&#10;    var View = $VIEW$;&#10;&#10;&#10;    /**&#10;     * Css class enum&#10;     * @enum {string}&#10;     */&#10;    View.CssClass = {&#10;        ROOT: 'g-button',&#10;    };&#10;&#10;&#10;    /**&#10;     * Event enum&#10;     * @enum {string}&#10;     */&#10;    View.Event = {&#10;    };&#10;&#10;&#10;    /**&#10;     * @override&#10;     * @param  {element} element&#10;     */&#10;    View.prototype.decorateInternal = function(element) {&#10;        View.base(this, 'decorateInternal', element);&#10;    };&#10;&#10;&#10;    /**&#10;     * @override&#10;     */&#10;    View.prototype.enterDocument = function() {&#10;        View.base(this, 'enterDocument');&#10;    };&#10;});  // goog.scope&#10;" description="Standard view inheritance template" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BASE_VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

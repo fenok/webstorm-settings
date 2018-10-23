@@ -1,0 +1,7 @@
+<templateSet group="Zen CSS">
+  <template name="tmpstl" value="@import &quot;../../i-media/i-media&quot;;&#10;@import &quot;../../i-utils/i-utils&quot;;&#10;&#10;" description="template style" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>

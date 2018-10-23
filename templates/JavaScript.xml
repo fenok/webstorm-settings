@@ -1,0 +1,55 @@
+<templateSet group="JavaScript">
+  <template name="greq" value="const $shortModuleName$ = goog.require('$moduleName$');" description="goog.require" toReformat="false" toShortenFQNames="true">
+    <variable name="moduleName" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+    <variable name="shortModuleName" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tpch" value="this.params.children" description="this.params.children" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tpc" value="this.params.config" description="this.params.config" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tpd" value="this.params.data" description="this.params.data" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="evt" value="$EVENT_NAME$: googEvents.getUniqueId('$eventName$')" description="event with getUniqueId" toReformat="false" toShortenFQNames="true">
+    <variable name="EVENT_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="eventName" expression="lowercaseAndDash(EVENT_NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tmpctrl" value="/**&#10; * @fileoverview $BLOCK_NAME$ block.&#10; * @author lfenko@changers.team (Leonid Fenko)&#10; */&#10;&#10;goog.module('aa.lActiveAge.b$BLOCK_NAME$.$BLOCK_NAME$');&#10;&#10;const Control = goog.require('cl.iControl.Control');&#10;const Factory = goog.require('aa.lActiveAge.iFactory.Factory');&#10;const Template = goog.require('aa.lActiveAge.b$BLOCK_NAME$.Template');&#10;const View = goog.require('aa.lActiveAge.b$BLOCK_NAME$.View');&#10;&#10;const googEvents = goog.require('goog.events');&#10;&#10;/**&#10; * @typedef {{&#10; *     data: {&#10; *     },&#10; *     config: {&#10; *     }&#10; * }} aa.lActiveAge.b$BLOCK_NAME$.Params&#10; */&#10;&#10;/**&#10; * @enum {string}&#10; * @const&#10; */&#10;const Event = {&#10;};&#10;&#10;/**&#10; * $BLOCK_NAME$ control&#10; * @extends {cl.iControl.Control}&#10; */&#10;class $BLOCK_NAME$ extends Control {&#10;    /**&#10;     * @param {cl.iControl.View} view&#10;     * @param {Object=} opt_domHelper&#10;     */&#10;    constructor(view, opt_domHelper) {&#10;        super(view, opt_domHelper);&#10;    }&#10;&#10;    /**&#10;     * @type {string}&#10;     */&#10;    static get NAME() {&#10;        return Template.NAME();&#10;    }&#10;&#10;    /**&#10;     * @enum {string}&#10;     */&#10;    static get Event() {&#10;        return Event;&#10;    }&#10;&#10;    /**&#10;     * @inheritDoc&#10;     */&#10;    enterDocument() {&#10;        super.enterDocument();&#10;    }&#10;&#10;    /**&#10;     * @override&#10;     */&#10;    initChildren() {&#10;    }&#10;&#10;    /**&#10;     * @override&#10;     */&#10;    convertParamsForTemplate(params) {&#10;        return params;&#10;    }&#10;}&#10;&#10;Factory.getInstance().register($BLOCK_NAME$.NAME, {&#10;    control: $BLOCK_NAME$,&#10;    view: View&#10;});&#10;&#10;/** @constructor */&#10;exports = $BLOCK_NAME$;&#10;" description="template control" toReformat="false" toShortenFQNames="true">
+    <variable name="BLOCK_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tmpvw" value="/**&#10; * @fileoverview $BLOCK_NAME$ block view.&#10; * @author lfenko@changers.team (Leonid Fenko)&#10; */&#10;&#10;goog.module('aa.lActiveAge.b$BLOCK_NAME$.View');&#10;&#10;const BaseView = goog.require('cl.iControl.View');&#10;&#10;const googDom = goog.require('goog.dom');&#10;&#10;const googEvents = goog.require('goog.events');&#10;&#10;/**&#10; * @enum {string}&#10; * @const&#10; */&#10;const Event = {&#10;&#10;};&#10;&#10;/**&#10; * @enum {string}&#10; * @const&#10; */&#10;const CssClass = {&#10;    ROOT: 'b-$BLOCK_NAME_CSS$',&#10;};&#10;&#10;/**&#10; * $BLOCK_NAME$ view&#10; * @extends {cl.iControl.View}&#10; */&#10;class View extends BaseView {&#10;    /**&#10;     * @param {Object=} opt_params&#10;     * @param {string=} opt_type&#10;     * @param {string=} opt_modifier&#10;     */&#10;    constructor(opt_params, opt_type, opt_modifier) {&#10;        super(opt_params, opt_type, opt_modifier);&#10;&#10;        /**&#10;         * @type {Element}&#10;         */&#10;        this.dom.root = null;&#10;    }&#10;&#10;    /**&#10;     * @enum {string}&#10;     */&#10;    static get CssClass() {&#10;        return CssClass;&#10;    }&#10;&#10;    /**&#10;     * @enum {string}&#10;     */&#10;    static get Event() {&#10;        return Event;&#10;    }&#10;&#10;    /**&#10;     * @inheritDoc&#10;     */&#10;    decorateInternal(element) {&#10;        super.decorateInternal(element);&#10;&#10;        this.dom.root = this.getElement();&#10;    };&#10;&#10;    /**&#10;     * @inheritDoc&#10;     */&#10;    enterDocument() {&#10;        super.enterDocument();&#10;    }&#10;}&#10;&#10;/** @constructor */&#10;exports = View;&#10;" description="template view" toReformat="false" toShortenFQNames="true">
+    <variable name="BLOCK_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BLOCK_NAME_CSS" expression="lowercaseAndDash(BLOCK_NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="exp" value="export { $END$ };" description="export" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="upcs" value="$UPPERCASED$" description="uppercase" toReformat="false" toShortenFQNames="true">
+    <variable name="UPPERCASED" expression="capitalizeAndUnderscore(clipboard())" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

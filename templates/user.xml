@@ -25,4 +25,10 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
+  <template name="expt" value="export {$COMPONENT_NAME$Template as $COMPONENT_NAME$, Props as $COMPONENT_NAME$Props} from './$COMPONENT_NAME$Template'" description="export from template" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENT_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
 </templateSet>

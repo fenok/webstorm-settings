@@ -12,6 +12,7 @@
       <mapping ext="cer" type="PLAIN_TEXT" />
       <mapping pattern="withLoadedFontStatus" type="TypeScript" />
       <mapping pattern="ModalTemplate" type="TypeScript" />
+      <mapping pattern="SideInfoDisplayTemplate" type="TypeScript" />
     </extensionMap>
   </component>
 </application>

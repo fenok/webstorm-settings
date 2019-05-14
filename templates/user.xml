@@ -31,4 +31,19 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
+  <template name="mhl" value="${mediaHeight.l} {&#10;    $END$&#10;}" description="${mediaHeight.l}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="mhm" value="${mediaHeight.m} {&#10;    $END$&#10;}" description="${mediaHeight.m}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="mhxl" value="${mediaHeight.xl} {&#10;    $END$&#10;}" description="${mediaHeight.xl}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
 </templateSet>

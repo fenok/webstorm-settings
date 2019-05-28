@@ -16,7 +16,7 @@
     <mask>*.mxml</mask>
     <mask>package.json</mask>
     <mask>README.md</mask>
-    <mask>*Connect.tsx</mask>
     <mask>*Graphql.ts</mask>
+    <mask>*Connect.tsx</mask>
   </component>
 </application>

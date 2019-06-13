@@ -19,13 +19,13 @@
       <option name="CSS" value="true" />
     </context>
   </template>
-  <template name="tmp" value="import * as React from 'react';&#10;import styled from 'styled-components';&#10;import { CommonProps } from '../../../common/types/CommonProps';&#10;&#10;interface Props extends CommonProps {}&#10;&#10;const $COMPONENT_NAME$Template: React.FC&lt;Props&gt; = ({ className }) =&gt; &lt;Root className={className}&gt;$COMPONENT_NAME$Template&lt;/Root&gt;;&#10;&#10;const Root = styled.div``;&#10;&#10;export { $COMPONENT_NAME$Template, Props };&#10;" description="React Component Template" toReformat="false" toShortenFQNames="true">
+  <template name="rc" value="import * as React from 'react';&#10;import styled from 'styled-components';&#10;import { CommonProps } from '../../../common/types/CommonProps';&#10;&#10;interface Props extends CommonProps {}&#10;&#10;const $COMPONENT_NAME$: React.FC&lt;Props&gt; = ({ className }) =&gt; {&#10;    return &lt;Root className={className}&gt;$COMPONENT_NAME$&lt;/Root&gt;;&#10;};&#10;&#10;const Root = styled.div``;&#10;&#10;export { $COMPONENT_NAME$, Props };&#10;" description="react component" toReformat="false" toShortenFQNames="true">
     <variable name="COMPONENT_NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="expt" value="export {$COMPONENT_NAME$Template as $COMPONENT_NAME$, Props as $COMPONENT_NAME$Props} from './$COMPONENT_NAME$Template'" description="export from template" toReformat="false" toShortenFQNames="true">
+  <template name="erc" value="export {$COMPONENT_NAME$, Props as $COMPONENT_NAME$Props} from './$COMPONENT_NAME$'" description="export react component" toReformat="false" toShortenFQNames="true">
     <variable name="COMPONENT_NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="TypeScript" value="true" />
